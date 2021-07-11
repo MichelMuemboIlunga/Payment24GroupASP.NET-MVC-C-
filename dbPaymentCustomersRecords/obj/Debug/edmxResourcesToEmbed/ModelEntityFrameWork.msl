@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbpaymentsModelStoreContainer" CdmEntityContainer="dbpaymentsEntities">
+    <EntitySetMapping Name="tblSales">
+      <EntityTypeMapping TypeName="dbpaymentsModel.tblSale">
+        <MappingFragment StoreEntitySet="tblSale">
+          <ScalarProperty Name="SaleId" ColumnName="SaleId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="prcShowProductSummaryWithRanks" FunctionName="dbpaymentsModel.Store.prcShowProductSummaryWithRanks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbpaymentsModel.prcShowProductSummaryWithRanks_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total Amount" />
+          <ScalarProperty Name="First_sale_Date" ColumnName="First sale Date" />
+          <ScalarProperty Name="Last_sale_Date" ColumnName="Last sale Date" />
+          <ScalarProperty Name="Rank_Straight" ColumnName="Rank Straight" />
+          <ScalarProperty Name="Consecutive_Rank_" ColumnName="Consecutive Rank " />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

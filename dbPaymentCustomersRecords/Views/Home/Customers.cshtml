@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customer Records</h2>
+<div>
+    @model IEnumerable<prcShowProductSummaryWithRanks_Result>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col" class="bgCol">Product ID</th>
+                <th scope="col" >Total Amount</th>
+                <th scope="col" class="bgCol">First Sale Date</th>
+                <th scope="col" >Last sale Date</th>
+                <th scope="col" class="bgCol">Rank Straight</th>
+                <th scope="col" >Consecutive Rank</th>
+            </tr>
+        </thead>
+
+        @foreach (prcShowProductSummaryWithRanks_Result record in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row" class="bgCol">@record.Product_ID</th>
+                    <th scope="row">@record.Total_Amount</th>
+                    <th scope="row" class="bgCol">@record.First_sale_Date</th>
+                    <th scope="row">@record.Last_sale_Date</th>
+                    <th scope="row" class="bgCol">@record.Rank_Straight</th>
+                    <th scope="row">@record.Consecutive_Rank_</th>
+                </tr>
+            </tbody>
+
+
+        }
+
+    </table>
+
+</div>
+

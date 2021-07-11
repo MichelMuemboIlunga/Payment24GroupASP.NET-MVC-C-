@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbpaymentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblSale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="SaleDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="dbpaymentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblSales" EntityType="Self.tblSale" />
+    <FunctionImport Name="prcShowProductSummaryWithRanks" ReturnType="Collection(dbpaymentsModel.prcShowProductSummaryWithRanks_Result)" />
+  </EntityContainer>
+  <ComplexType Name="prcShowProductSummaryWithRanks_Result">
+    <Property Type="Int32" Name="Product_ID" Nullable="true" />
+    <Property Type="Double" Name="Total_Amount" Nullable="true" />
+    <Property Type="DateTime" Name="First_sale_Date" Nullable="true" />
+    <Property Type="DateTime" Name="Last_sale_Date" Nullable="true" />
+    <Property Type="Int64" Name="Rank_Straight" Nullable="true" />
+    <Property Type="Int64" Name="Consecutive_Rank_" Nullable="true" />
+  </ComplexType>
+</Schema>

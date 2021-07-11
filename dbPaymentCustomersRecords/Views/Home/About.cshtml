@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+
+
+<p>
+    
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Click To Read More</button>
+</p>
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <div class="jumbotron">
+                    <h1>Payment24 Group</h1>
+                    <p class="lead">About The Site And Technologies used</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                This Application was developed by<mark><em><strong>michel muembo Ilunga</strong></em></mark>, as part of the head-up task given by the payment24 group. to develop an application using the <mark><strong>asp.net MVC framework C#</strong></mark>, <mark><strong>bootstrap</strong></mark>, <mark><strong>Javascript</strong></mark>, And <mark><strong>SQL SERVER</strong></mark>.
+                This Site get data from a stored procedure created on SQL SERVER then embed it to the asp.net MVC entity framework.
+            </div>
+        </div>
+    </div>
+</div>
